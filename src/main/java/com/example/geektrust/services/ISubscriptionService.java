@@ -3,7 +3,7 @@ package com.example.geektrust.services;
 import java.time.LocalDate;
 
 import com.example.geektrust.entity.Topup;
-import com.example.geektrust.entity.Plans.Plan;
+import com.example.geektrust.entity.PlanType.Plan;
 
 public interface ISubscriptionService {
     public void createSubscription(LocalDate date);
