@@ -10,6 +10,10 @@ import com.example.geektrust.entity.categories.TopUpCategories;
 public class SubscriptionService implements ISubscriptionService{
 	private Subscription subscription;
 	
+	public SubscriptionService(Subscription subscription) {
+        this.subscription = subscription;
+    }
+	
 	public void startSubscription(LocalDate date) {
 		
 	}
