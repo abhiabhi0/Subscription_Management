@@ -2,17 +2,16 @@ package com.example.geektrust.services;
 
 import java.time.LocalDate;
 
-import com.example.geektrust.entity.Topup;
-import com.example.geektrust.entity.PlanType.Plan;
+import com.example.geektrust.entity.categories.*;
 
 public interface ISubscriptionService {
-    public void createSubscription(LocalDate date);
-
-    public void addActivePlan(Plan plan);
+    public void startSubscription(LocalDate date);
+    
+    public void addSubscription(StreamingCategories streamingCategory, PlanCategories plan);
 
     public void printRenewDetails();
 
-    public void addTopUp(Topup topup);
+    public void addTopUp(TopUpCategories topup);
     
-    public Integer getPlanValue();
+    public int getPlanValue();
 }

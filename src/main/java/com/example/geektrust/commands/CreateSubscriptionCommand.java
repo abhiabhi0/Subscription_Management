@@ -19,8 +19,8 @@ public class CreateSubscriptionCommand implements ICommand{
     @Override
     public void execute(List<String> commandParts) {
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-            LocalDate date = LocalDate.parse(commandParts.get(DATE_INDEX), formatter);
+            DateTimeFormatter dtFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+            LocalDate date = LocalDate.parse(commandParts.get(DATE_INDEX), dtFormatter);
             subscriptionService.createSubscription(date);
         } catch (Exception e) {
             if (e instanceof DateTimeParseException)
