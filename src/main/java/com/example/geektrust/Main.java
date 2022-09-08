@@ -1,5 +1,10 @@
 package com.example.geektrust; 
 
+import java.time.LocalDate;
+
+import com.example.geektrust.*;
+import com.example.geektrust.services.SubscriptionService;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -15,6 +20,12 @@ public class Main {
             sc.close(); // closes the scanner
         } catch (IOException e) {
         }
-        */
+        */    	
+
+        SubscriptionService subscriptionService = new SubscriptionService();
+        LocalDate startDate = LocalDate.parse("2022-02-20");
+        subscriptionService.startSubscription(startDate);
+        subscriptionService.addSubscription("MUSIC", "PERSONAL");
+        subscriptionService.printRenewDetails();
     }
 }

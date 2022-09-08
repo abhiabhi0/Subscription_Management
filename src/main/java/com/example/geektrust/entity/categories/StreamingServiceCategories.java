@@ -1,5 +1,5 @@
 package com.example.geektrust.entity.categories;
 
-public enum StreamingCategories {
+public enum StreamingServiceCategories {
 	MUSIC, VIDEO, PODCAST;
 }
