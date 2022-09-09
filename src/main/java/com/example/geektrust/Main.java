@@ -1,6 +1,7 @@
 package com.example.geektrust; 
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import com.example.geektrust.*;
 import com.example.geektrust.services.SubscriptionService;
@@ -23,9 +24,15 @@ public class Main {
         */    	
 
         SubscriptionService subscriptionService = new SubscriptionService();
-        LocalDate startDate = LocalDate.parse("2022-02-20");
+
+        DateTimeFormatter inFormatter = DateTimeFormatter.ofPattern("dd-MM-uuuu");
+
+        LocalDate startDate = LocalDate.parse("20-02-2022", inFormatter);
         subscriptionService.startSubscription(startDate);
         subscriptionService.addSubscription("MUSIC", "PERSONAL");
+        subscriptionService.addSubscription("VIDEO", "PREMIUM");
+        subscriptionService.addSubscription("PODCAST", "FREE");
+        subscriptionService.addTopUp("FOUR_DEVICE", 3);
         subscriptionService.printRenewDetails();
     }
 }

@@ -11,8 +11,8 @@ public interface ISubscriptionService {
     public void addSubscription(String subscriptionCategory, String planName);
 
     public void printRenewDetails();
-//
-//    public void addTopUp(TopUpCategories topUpCategory, Integer months);
+
+    public void addTopUp(String topUpCategory, Integer months);
 //    
 //    public LocalDate calculateNextReminderDate(StreamingServiceCategories streamingServiceCategory); 
 //    

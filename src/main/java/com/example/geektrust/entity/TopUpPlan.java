@@ -1,3 +1,4 @@
+
 package com.example.geektrust.entity;
 
 import com.example.geektrust.entity.categories.*;
